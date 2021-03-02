@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/res/colors.dart';
 import 'package:flutter_app/screens/HomePage.dart';
 import 'package:flutter_app/screens/MyAccountPage.dart';
+import 'package:flutter_app/screens/NewsPage.dart';
 
 class BottomTabBar extends StatefulWidget {
   BottomTabBar({Key key}) : super(key: key);
@@ -12,16 +13,13 @@ class BottomTabBar extends StatefulWidget {
 
 class _BottomTabBarState extends State<BottomTabBar> {
   int _selectedIndex = 0;
-
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  // 定义样式
+  // static const TextStyle optionStyle =
+  //     TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
   static List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
+    NewsPage(),
     MyAccountPage(),
   ];
 
@@ -34,9 +32,9 @@ class _BottomTabBarState extends State<BottomTabBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('BottomTabBar'),
-      ),
+      // appBar: AppBar(
+      //   title: const Text('BottomTabBar'),
+      // ),
       body: Center(child: _widgetOptions.elementAt(_selectedIndex)),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
