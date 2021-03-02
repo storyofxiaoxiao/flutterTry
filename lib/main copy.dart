@@ -1,12 +1,12 @@
 // 引入 flutter UI 库 material
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart'
-import 'package:english_words/english_words.dart';
+import 'package:flutter_app/routes.dart';
 
 // 默认文件启动函数 main 指向 runapp 函数(),并且在里面调用 MyApp 类
 void main() {
   runApp(MyApp());
 }
+
 // 声明一个 MyApp 类，并且继承与 StatelessWidget 类
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: staticRoutes,
     );
   }
 }
@@ -118,16 +119,5 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
-  }
-}
-
-class MySwiper extends StatelessWidget{
-  @override
-  Widget build(BuildContext context){
-    return Scaffold(
-      title: 'swiper',
-      home
-    )
-    
   }
 }
