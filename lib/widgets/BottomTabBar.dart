@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/res/colors.dart';
+import 'package:flutter_app/res/res_colors.dart';
 import 'package:flutter_app/screens/HomePage.dart';
 import 'package:flutter_app/screens/MyAccountPage.dart';
 import 'package:flutter_app/screens/NewsPage.dart';
